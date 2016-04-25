@@ -1,0 +1,119 @@
+<!doctype html>  
+
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+
+
+  <title>jQuery Slideshow (sshow)</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  
+  <style>
+  
+  *{margin:0;padding:0}
+  
+  body{font:12px/1.5 arial;}
+  
+  #slideshow,#slideshow2{margin:0 0 20px}
+  
+  .sshow a img {border:none}
+  
+  .sshow img{display:block}
+  
+  .sshow{height:300px;position:relative;width:400px;z-index:1000}
+  
+  .sshow ul{list-style:none}
+  
+  .sshow ul li{position:absolute;left:0;top:0;z-index:8}
+  
+  .sshow li.active{z-index:10}
+  
+  .sshow li.last-active{z-index:9}
+  
+  .sshow-caption{color:#fff;position:absolute;left:10px;bottom:13px;z-index:12;}
+  
+  .sshow-caption-bg{background:#000;height:40px;width:400px;position:absolute;left:0;bottom:0;z-index:11;}
+  
+  </style>
+
+
+
+</head>
+
+<body>
+
+	<div id="container">
+	
+	
+		<div id="main">
+		
+			<div id="slideshow" class="sshow">
+			
+				<ul>
+				
+					<li><a href="http://www.google.com/"><img src="http://images.essentialibiza.com/ibiza-club-listings-images/cream/cream-1.jpg" height="300" width="400" alt="cream image 1"></a></li>
+					<li><img src="http://images.essentialibiza.com/ibiza-club-listings-images/cream/cream-2.jpg" height="300" width="400" alt="cream image 2"></li>
+					<li><img src="http://images.essentialibiza.com/beach-ibiza/cala-benirras/cala-benirras-1.jpg" height="300" width="400" alt="cream image 3"></li>
+					
+				
+				</ul>
+			
+			
+			</div>
+			
+			<div id="slideshow2" class="sshow">
+			
+				<ul>
+				
+					<li><a href="http://www.google.com/"><img src="http://images.essentialibiza.com/ibiza-club-listings-images/cream/cream-1.jpg" height="300" width="400" alt="cream image 1"></a></li>
+					<li><img src="http://images.essentialibiza.com/ibiza-club-listings-images/cream/cream-2.jpg" height="300" width="400" alt="cream image 2"></li>
+					<li><img src="http://images.essentialibiza.com/beach-ibiza/cala-benirras/cala-benirras-1.jpg" height="300" width="400" alt="cream image 3"></li>
+					
+				
+				</ul>
+			
+			
+			</div>
+			
+			<div id="slideshow3" class="sshow">
+			
+				<ul>
+				
+					<li><a href="http://www.google.com/"><img src="http://images.essentialibiza.com/ibiza-club-listings-images/cream/cream-1.jpg" height="300" width="400" alt="cream image 1"></a></li>
+					<li><img src="http://images.essentialibiza.com/ibiza-club-listings-images/cream/cream-2.jpg" height="300" width="400" alt="cream image 2"></li>
+					<li><img src="http://images.essentialibiza.com/beach-ibiza/cala-benirras/cala-benirras-1.jpg" height="300" width="400" alt="cream image 3"></li>
+					
+				
+				</ul>
+			
+			
+			</div>
+
+		
+		</div>
+	
+	
+	</div> 
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.js"></script>
+	
+	<script src="js/jquery.slideshow.js"></script>
+	
+	<script>
+	
+		$(function(){
+			
+			$('#slideshow').sslide();
+			
+			$('#slideshow2').sslide({background:'#fff',color:'#000',opacity:0.5,delay:6000});
+			
+			$('#slideshow3').sslide({caption:false});
+		
+		});
+	
+	</script>
+
+  
+</body>
+</html>

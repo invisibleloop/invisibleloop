@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+
+
+  <title>invisibleloop.com | jQuery plugin - belowfold. Below the fold content detection.</title>
+  <meta name="description" content="Belowfold is a lightweight jQuery plugin to detect content below the fold and display a helpful message.">
+  <meta name="keywords" content="belowfold, below the fold, jquery, javascript, plugin, web design">
+
+
+  <!-- CSS : implied media="all" -->
+  <link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/style.css?v=1">
+  <link rel="stylesheet" href="css/prettify.css">
+
+
+
+ 
+  <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
+  <script src="js/modernizr-1.5.min.js"></script>
+  
+
+</head>
+
+ <body>
+
+
+
+  <div id="container">
+    <header>
+        <a id="site-logo" href="#" title="go home"><img src="img/logo-belowfold.png" alt="belowfold logo" height="69" width="240"></a>
+    </header>
+    
+    <div id="main">
+    	<div class="ads">
+			<script type="text/javascript"><!--
+			google_ad_client = "ca-pub-9619663769943164";
+			/* belowfold 4 */
+			google_ad_slot = "8554685719";
+			google_ad_width = 500;
+			google_ad_height = 15;
+			//-->
+			</script>
+			<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+			</script>
+
+		</div>
+    
+		<div id="content">
+				
+			<h1 class="statement">.belowfold() is a jQuery plugin for easy below the fold content detection with a helpful message for the unaware user to scroll down.</h1>
+			
+			<p class="instructions"><span class="sub-title"><b>Tip!</b></span> Scroll this page to the top, hit refresh in your browser and wait. The popup message will appear in 5 seconds!</p>
+
+			<p>It has been proven that a large number of people browsing the web still don't scroll down the page when there is content below the fold (content which is out of view below the browser window). Best practise is to have all the important information above the fold, but if you want to make people who don't scroll aware of the extra content then this is the plugin for you.</p>
+
+			<p>The helpful message will only appear if the user has not scrolled after a set period of time. If the user scrolls before the set period the message will not appear. Also the message will disappear automatically after a set period of time or if the user scrolls the window and if the browser window is resized larger than the document.</p>
+						
+			<h2 class="sub-title">How to use</h2>
+			
+			<p class="instructions"><b>1.</b> Download or link to the jQuery library 1.4.x</p>
+			
+			<pre class="prettyprint">&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js">&lt;/script></pre>
+			
+			<p class="instructions"><b>2.</b> Link to the belowfold plugin below the jQuery library</p>
+			
+			<pre class="prettyprint">&lt;script src="js/jquery.belowfold.min.js">&lt;/script></pre>
+
+			<p class="instructions"><b>3.</b> Add the .png image to the same folder as your html pages or better still set the location with the src parameter.</p>
+						
+			<p class="instructions"><b>4.</b> Start by adding the jQuery document ready function below the library and plugin scripts either on the page or in external .js file</p>
+			
+		<a style="display:block;margin-bottom:20px" target="_blank" href="http://www.shareasale.com/r.cfm?b=435237&u=744009&m=43811&urllink=&afftrack="><img src="http://www.shareasale.com/image/43811/728x90-2.png" alt="Learn Coding & Web Design at Treehouse" border="0"></a>
+
+
+			<pre class="prettyprint">&lt;script>
+$(function(){
+
+	// your code here
+			
+});
+&lt;/script></pre>
+
+			<p class="instructions"><b>5.</b> Apply the plugin to the selector where you want the message to appear. Attaching it to the body will centre the pop up message in the browser window. Attaching it to an id selector will centre it within this element.</p>
+
+			<pre class="prettyprint">&lt;script>
+$(function(){
+
+	// attach it to the body
+
+	$('body').belowfold();
+	
+	// or to an element with an id
+	
+	$('#content').belowfold();
+			
+});
+&lt;/script></pre>
+
+			<p class="instructions"><b>6.</b> Popup delay: To delay the pop up window you can add a delay parameter. Default is 5000 milliseconds (this is also the minumum).</p>
+
+			<pre class="prettyprint">&lt;script>
+$(function(){
+
+	// 10 second delay
+
+	$('#content').belowfold({delay:10000});
+			
+});
+&lt;/script></pre>
+
+		<p class="instructions"><b>7.</b> Popup placement: To set how far up the page from the fold you want the popup to be placed you can set the bottom parameter i.e pixels from the bottom of the window. Default is 20px.</p>
+
+			<pre class="prettyprint">&lt;script>
+$(function(){
+
+	// the popup will appear 50px from the bottom of the browser window
+
+	$('#content').belowfold({bottom:'50px'});
+			
+});
+&lt;/script></pre>
+
+			<p class="instructions"><b>8.</b> Popup fade out: To change how long the popup appears before fading out, you can change the duration parameter. Default is 5000 milliseconds.</p>
+
+			<pre class="prettyprint">&lt;script>
+$(function(){
+
+	// the popup will fade away after 7 seconds
+
+	$('#content').belowfold({duration:7000});
+			
+});
+&lt;/script></pre>
+
+			<p class="instructions"><b>9.</b> Popup fade in and out: To change the fade in and fade out duration you can use the fadeIn and fadeOut parameters using milliseconds or standard jQuery 'slow' and 'fast' values. Default is 500 milliseconds.</p>
+
+			<pre class="prettyprint">&lt;script>
+$(function(){
+
+	// the popup fade in duration is fast
+	// the fade out duration will take 1 second
+
+	$('#content').belowfold({fadeIn:'fast', fadeOut:1000});
+			
+});
+&lt;/script></pre>
+
+			<p class="instructions"><b>10.</b> Image source: You can use your own image for the popup message. Just add the location to your image and edit the width and height properties to match the dimensions. The image format can either .gif or .png You can also store the image in a folder of your choice.</p>
+
+			<pre class="prettyprint">&lt;script>
+$(function(){
+
+	// use your own image for the pop up message
+	
+	$('#content').belowfold({width:'200px', height:'50px', src:'images/your-image.png'});
+			
+});
+&lt;/script></pre>
+
+			<p class="instructions"><b>11.</b> Popup z-index: The z-index of the pop up is set to 1000. If you need to change this you can edit the zIndex parameter:</p>
+
+			<pre class="prettyprint">&lt;script>
+$(function(){
+
+	// make sure your popup always appears above your content
+	
+	$('#content').belowfold({zIndex:2000});
+			
+});
+&lt;/script></pre>
+
+			<p class="instructions"><b>12.</b> The plugin automatically sets the selector to have a position:relative in the css so the popup can be positioned within it. If the element is already set to position:relative or it is absolutely positioned then you can turn this feature off:</p>
+
+			<pre class="prettyprint">&lt;script>
+$(function(){
+	
+	$('#content').belowfold({autoPosition:false});
+			
+});
+&lt;/script></pre>
+
+			
+			<p class="instructions"><b>13.</b> The message will not appear if the window has been scrolled before the delay time or if the window is at the bottom of the document. If you want to add an area for the plugin to ignore at the footer of your document then you can add an offset parameter:</p>
+
+			<pre class="prettyprint">&lt;script>
+$(function(){
+	
+	// the plugin will ignore 100px from the bottom of the document
+	
+	$('#content').belowfold({offset:'100px'});
+			
+});
+&lt;/script></pre>
+
+			<p class="instructions"><b>14.</b> Example with all parameters:</p>
+
+			<pre class="prettyprint">&lt;script>
+$(function(){
+	
+	$('#content').belowfold({
+		delay: 10000,
+		duration: 7000,
+		width: '200px',
+		height: '50px',
+		bottom: '60px',
+		zIndex: 2000,
+		fadeIn: 'fast',
+		fadeOut: 1000,
+		src: 'images/your-image.png',
+		offset: '100px',
+		autoPosition: false
+	});
+			
+});
+&lt;/script></pre>
+
+			<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'invisibleloop'; // required: replace example with your forum shortname
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+     var disqus_identifier = 'inv2010com';
+    // var disqus_url = 'http://example.com/permalink-to-page.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    	 <a style="display:block;margin-bottom:20px" href="http://www.mediatemple.net#a_aid=50ae175774326&amp;a_bid=dbc327e0" target="_top" rel=”nofollow”><img src="https://affiliate.mediatemple.net/accounts/default1/banners/728x90.jpg" alt="" width="728" height="90" /></a><img style="border:0" src="https://affiliate.mediatemple.net/scripts/imp.php?a_aid=50ae175774326&amp;a_bid=dbc327e0" width="1" height="1" alt="" />
+
+		
+		</div>
+		
+		<div id="sidebar">
+		
+			<h2 class="sub-title-sidebar">Downloads</h2>
+			
+			<p class="downloads last"><b>v1.0.0</b> - Initial Release<br><b>Link:</b> <a href="http://code.google.com/p/belowfold/downloads/list">hosted @ google code</a></p>
+			
+			<h2 class="sub-title-sidebar">Follow me</h2>
+			
+			<p class="downloads last">Updates and news via Twitter<br><a href="http://twitter.com/belowfold">@belowfold</a></p>
+			
+			<h2 class="sub-title-sidebar">Spread the word</h2>
+			
+			<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="@belowfold">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+			<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Finvisibleloop.com%2Fjquery%2Fplugin%2Fbelowfold&amp;layout=standard&amp;show_faces=true&amp;width=220&amp;action=like&amp;colorscheme=light&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:220px; height:80px;" allowTransparency="true"></iframe>
+					
+		</div>
+		
+		
+    </div>
+    
+
+  </div> <!--! end of #container -->
+  
+    <div class="footer clearfix">
+		<p>copyright &copy; 2010 invisibleloop (Andy Stubbs) | Code license <a href="http://www.opensource.org/licenses/mit-license.php" title="MIT License">MIT License</a></p>
+    </div>
+
+
+
+  	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  
+	<script src="js/jquery.belowfold.min.js"></script>
+  	<script src="js/prettify.js"></script>
+
+  
+	<script>
+	
+	 
+	  
+	  $(function(){
+	  
+	   prettyPrint();
+	  
+	  	$('body').belowfold({src:'img/down-arrow.png'});
+	  
+	  });
+	
+	</script>
+
+
+
+
+  <script>
+   var _gaq = [['_setAccount', 'UA-1701006-2'], ['_trackPageview']];
+   (function(d, t) {
+    var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+    g.async = true;
+    g.src = '//www.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g, s);
+   })(document, 'script');
+  </script>
+  
+</body>
+</html>

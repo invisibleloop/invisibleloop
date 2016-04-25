@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /dev
+Disallow: /foosball
+Disallow: /table-football-league
+Disallow: /forum
+Disallow: /swapwindow_final.swf
+Disallow: /shop
+Disallow: /nashfrancis
